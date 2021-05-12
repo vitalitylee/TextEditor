@@ -13,7 +13,7 @@
 
 1. 打开文件
 
-![OpenFile](https://github.com/vitalitylee/TextEditor/blob/main/docs/imgs/open_file.png)
+![OpenFile](docs/imgs/open_file.png)
 
 2. 编辑文本
 
