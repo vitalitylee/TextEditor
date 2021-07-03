@@ -9,4 +9,6 @@
 
 #include "resource.h"
 
+extern HWND hMainWindow;
+
 BOOL InitEnv(HINSTANCE hInstance, int nShowCmd);

@@ -7,6 +7,7 @@ BOOL InitMainWindowClass(HINSTANCE hInstance);
 
 LPCWSTR mainWIndowClassName = L"TextEditorMainWindow";
 HANDLE gHFont = NULL;
+HWND hMainWindow = NULL;
 HWND hTextEditor = NULL;
 BOOL textChanged = FALSE;
 
@@ -209,7 +210,6 @@ VOID MainWindow_Cls_OnSize(
 	);
 }
 
-
 /**
 * 作用：
 *	主窗体消息处理函数
@@ -319,9 +319,8 @@ BOOL InitMainWindowClass(HINSTANCE hInstance) {
 *	否则返回 FALSE。
 */
 BOOL CreateMainWindow(HINSTANCE hInstance, int cmdShow) {
-	HWND mainWindowHwnd = NULL;
 	// 创建一个窗体对象实例。
-	mainWindowHwnd = CreateWindowEx(
+	hMainWindow = CreateWindowEx(
 		WS_EX_APPWINDOW,
 		mainWIndowClassName,
 		TEXT("TextEditor"),
@@ -336,17 +335,17 @@ BOOL CreateMainWindow(HINSTANCE hInstance, int cmdShow) {
 		NULL
 	);
 
-	if (NULL == mainWindowHwnd) {
+	if (NULL == hMainWindow) {
 		DisplayError(TEXT("CreateWindowEx"), NULL);
 		return FALSE;
 	}
 
 	// 由于返回值只是标识窗体是否已经显示，对于我们
 	// 来说没有意义，所以这里丢弃返回值。
-	ShowWindow(mainWindowHwnd, cmdShow);
+	ShowWindow(hMainWindow, cmdShow);
 
-	if (!UpdateWindow(mainWindowHwnd)) {
-		DisplayError(TEXT("UpdateWindow"), mainWindowHwnd);
+	if (!UpdateWindow(hMainWindow)) {
+		DisplayError(TEXT("UpdateWindow"), hMainWindow);
 		return FALSE;
 	}
 
