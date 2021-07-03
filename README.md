@@ -42,3 +42,8 @@ git clone https://github.com/vitalitylee/TextEditor
 3. 点击运行按钮
 
 ![点击运行](docs/imgs/vs_run.png)
+
+欢迎关注公众号[编程之路漫漫],查看本项目的编辑过程。
+
+![image](https://user-images.githubusercontent.com/72752039/118004804-5e0a9300-b37c-11eb-82ac-a30158b0333c.png)
+
