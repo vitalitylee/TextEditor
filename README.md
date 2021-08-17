@@ -1,7 +1,7 @@
 # TextEditor
 
 一个使用 `C` 语言，在 `Windows` 环境下的文本编辑器。
-编辑器的实现过程，可以在这篇文章中找到。
+编辑器的实现过程，可以在[这篇文章](https://mp.weixin.qq.com/s/fJcXPYUanUuCLzhwzaWhxw)中找到。
 
 # 实现功能
 
